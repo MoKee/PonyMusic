@@ -1,3 +1,20 @@
+/*
+ * Copyright (C) 2016-2017 wangchenyan
+ * Copyright (C) 2016-2017 The MoKee Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package me.wcy.music.utils;
 
 import android.app.Activity;
@@ -13,7 +30,7 @@ import com.google.gson.JsonSyntaxException;
 
 import im.fir.sdk.FIR;
 import im.fir.sdk.VersionCheckCallback;
-import me.wcy.music.BuildConfig;
+import me.wcy.music.R;
 import me.wcy.music.activity.AboutActivity;
 import me.wcy.music.api.Key;
 import me.wcy.music.model.UpdateInfo;
@@ -46,7 +63,7 @@ public class UpdateUtils {
                     return;
                 }
                 int version = Integer.valueOf(updateInfo.version);
-                if (version > BuildConfig.VERSION_CODE) {
+                if (version > Integer.valueOf(activity.getString(R.string.version_name))) {
                     updateDialog(activity, updateInfo);
                 } else {
                     if (activity instanceof AboutActivity) {

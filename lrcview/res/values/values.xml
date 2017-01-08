@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LrcView">
+        <attr format="dimension" name="lrcTextSize"/>
+        <attr format="dimension" name="lrcDividerHeight"/>
+        <attr format="reference|color" name="lrcNormalTextColor"/>
+        <attr format="reference|color" name="lrcCurrentTextColor"/>
+        <attr format="integer" name="lrcAnimationDuration"/>
+        <attr format="string" name="lrcLabel"/>
+        <attr format="dimension" name="lrcPadding"/>
+    </declare-styleable>
+    <string name="app_name">LrcView</string>
+</resources>
